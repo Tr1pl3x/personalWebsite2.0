@@ -1,11 +1,13 @@
 "use client"
 
-import { useEffect } from "react"
+import { useEffect, useRef } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { X, Github, ExternalLink } from "lucide-react"
 
 export default function ProjectModal({ isOpen, onClose, projects }) {
+  const overlayRef = useRef(null);
+
   useEffect(() => {
     // Disable scrolling when modal is open
     if (isOpen) {
@@ -34,11 +36,22 @@ export default function ProjectModal({ isOpen, onClose, projects }) {
     return () => window.removeEventListener("keydown", handleKeyDown)
   }, [isOpen, onClose])
 
+  // Handle click on overlay
+  const handleOverlayClick = (e) => {
+    if (e.target === overlayRef.current) {
+      onClose();
+    }
+  };
+
   if (!isOpen) return null
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm overflow-y-auto">
-      <div className="relative w-full max-w-5xl bg-zinc-900 rounded-lg shadow-xl p-6 md:p-8 animate-fade-in my-8">
+    <div 
+      ref={overlayRef}
+      className="fixed inset-0 z-50 flex items-start justify-center bg-black/80 backdrop-blur-sm p-4"
+      onClick={handleOverlayClick}
+    >
+      <div className="relative w-full max-w-5xl bg-zinc-900 rounded-lg shadow-xl p-6 md:p-8 animate-fade-in my-8 max-h-[85vh] overflow-y-auto">
         {/* Close button */}
         <button
           onClick={onClose}
@@ -85,14 +98,16 @@ export default function ProjectModal({ isOpen, onClose, projects }) {
                     <Github size={16} />
                     Code
                   </Link>
-                  <Link
-                    href={project.liveUrl}
-                    target="_blank"
-                    className="text-white hover:text-orange-500 transition-colors flex items-center gap-1 text-sm"
-                  >
-                    <ExternalLink size={16} />
-                    Live Demo
-                  </Link>
+                  {project.liveUrl && project.liveUrl.trim() !== '' && (
+                    <Link
+                      href={project.liveUrl}
+                      target="_blank"
+                      className="text-white hover:text-orange-500 transition-colors flex items-center gap-1 text-sm"
+                    >
+                      <ExternalLink size={16} />
+                      Live Demo
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>
@@ -102,4 +117,3 @@ export default function ProjectModal({ isOpen, onClose, projects }) {
     </div>
   )
 }
-

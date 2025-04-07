@@ -45,10 +45,64 @@ export default function Home() {
       image: "/placeholder.svg?height=300&width=500&text=Portfolio",
       tags: ["Next.js", "Tailwind CSS", "Framer Motion"],
       githubUrl: "https://github.com/yourusername/project2",
-      liveUrl: "https://project2-demo.com",
+      liveUrl: "",
     },
     {
       id: 3,
+      title: "Task Management App",
+      description: "A task management application with drag-and-drop functionality and user authentication.",
+      image: "/placeholder.svg?height=300&width=500&text=Task+App",
+      tags: ["React", "Firebase", "Tailwind CSS"],
+      githubUrl: "https://github.com/yourusername/project3",
+      liveUrl: "https://project3-demo.com",
+    },
+    {
+      id: 9,
+      title: "Task Management App",
+      description: "A task management application with drag-and-drop functionality and user authentication.",
+      image: "/placeholder.svg?height=300&width=500&text=Task+App",
+      tags: ["React", "Firebase", "Tailwind CSS"],
+      githubUrl: "https://github.com/yourusername/project3",
+      liveUrl: "https://project3-demo.com",
+    },
+    {
+      id: 4,
+      title: "Task Management App",
+      description: "A task management application with drag-and-drop functionality and user authentication.",
+      image: "/placeholder.svg?height=300&width=500&text=Task+App",
+      tags: ["React", "Firebase", "Tailwind CSS"],
+      githubUrl: "https://github.com/yourusername/project3",
+      liveUrl: "https://project3-demo.com",
+    },
+    {
+      id: 5,
+      title: "Task Management App",
+      description: "A task management application with drag-and-drop functionality and user authentication.",
+      image: "/placeholder.svg?height=300&width=500&text=Task+App",
+      tags: ["React", "Firebase", "Tailwind CSS"],
+      githubUrl: "https://github.com/yourusername/project3",
+      liveUrl: "https://project3-demo.com",
+    },
+    {
+      id: 6,
+      title: "Task Management App",
+      description: "A task management application with drag-and-drop functionality and user authentication.",
+      image: "/placeholder.svg?height=300&width=500&text=Task+App",
+      tags: ["React", "Firebase", "Tailwind CSS"],
+      githubUrl: "https://github.com/yourusername/project3",
+      liveUrl: "https://project3-demo.com",
+    },
+    {
+      id: 7,
+      title: "Task Management App",
+      description: "A task management application with drag-and-drop functionality and user authentication.",
+      image: "/placeholder.svg?height=300&width=500&text=Task+App",
+      tags: ["React", "Firebase", "Tailwind CSS"],
+      githubUrl: "https://github.com/yourusername/project3",
+      liveUrl: "https://project3-demo.com",
+    },
+    {
+      id: 8,
       title: "Task Management App",
       description: "A task management application with drag-and-drop functionality and user authentication.",
       image: "/placeholder.svg?height=300&width=500&text=Task+App",
@@ -105,10 +159,6 @@ export default function Home() {
     "Firebase",
     "GraphQL",
   ]
-
-  const openProjectModal = () => {
-    setIsProjectModalOpen(true)
-  }
 
   return (
     <main className="min-h-screen bg-black text-white">
@@ -252,7 +302,7 @@ export default function Home() {
                 My <span className="text-orange-500">Projects</span>
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {projects.map((project) => (
+                {projects.slice(0, 3).map((project) => (
                   <div
                     key={project.id}
                     className="bg-zinc-900 rounded-lg overflow-hidden border border-white/10 hover:border-orange-500/50 transition-all duration-300 hover:transform hover:scale-[1.02] group"
@@ -287,20 +337,16 @@ export default function Home() {
                           <Github size={16} />
                           Code
                         </Link>
-                        <Link
-                          href={project.liveUrl}
-                          target="_blank"
-                          className="text-white hover:text-orange-500 transition-colors flex items-center gap-1"
-                        >
-                          <ExternalLink size={16} />
-                          Live Demo
-                        </Link>
-                        <button
-                          onClick={() => openProjectModal()}
-                          className="text-white hover:text-orange-500 transition-colors flex items-center gap-1"
-                        >
-                          Details
-                        </button>
+                        {project.liveUrl && project.liveUrl.trim() !== '' && (
+                          <Link
+                            href={project.liveUrl}
+                            target="_blank"
+                            className="text-white hover:text-orange-500 transition-colors flex items-center gap-1"
+                          >
+                            <ExternalLink size={16} />
+                            Live Demo
+                          </Link>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -396,7 +442,7 @@ export default function Home() {
               style={{ animationDelay: "0.6s", animationFillMode: "forwards" }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-                Get In <span className="text-orange-500">Touch</span>
+                Get In <span className="text-orange-500">Touch</span> Now!
               </h2>
 
               {/* Social Media Icons */}
@@ -485,66 +531,7 @@ export default function Home() {
                 </Link>
               </div>
 
-              <p className="text-center text-gray-300 mb-8 max-w-2xl mx-auto">
-                Have a project in mind or want to discuss potential opportunities? Feel free to reach out to me through
-                my social media channels or send me an email.
-              </p>
-              <div className="bg-black p-8 rounded-lg border border-white/10">
-                <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-300">
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      className="w-full px-4 py-3 bg-zinc-900 border border-white/10 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 text-white"
-                      placeholder="Your Name"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-300">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      className="w-full px-4 py-3 bg-zinc-900 border border-white/10 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 text-white"
-                      placeholder="your.email@example.com"
-                    />
-                  </div>
-                  <div className="space-y-2 md:col-span-2">
-                    <label htmlFor="subject" className="block text-sm font-medium text-gray-300">
-                      Subject
-                    </label>
-                    <input
-                      type="text"
-                      id="subject"
-                      className="w-full px-4 py-3 bg-zinc-900 border border-white/10 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 text-white"
-                      placeholder="Project Inquiry"
-                    />
-                  </div>
-                  <div className="space-y-2 md:col-span-2">
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-300">
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      rows={5}
-                      className="w-full px-4 py-3 bg-zinc-900 border border-white/10 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 text-white"
-                      placeholder="Your message here..."
-                    ></textarea>
-                  </div>
-                  <div className="md:col-span-2">
-                    <button
-                      type="submit"
-                      className="w-full bg-orange-500 text-black px-6 py-3 rounded-md hover:bg-orange-400 transition-all duration-300 font-medium"
-                    >
-                      Send Message
-                    </button>
-                  </div>
-                </form>
-              </div>
+          
             </div>
           </div>
         </div>
@@ -569,10 +556,7 @@ export default function Home() {
       </footer>
 
       {/* Project Modal */}
-      {isProjectModalOpen && (
-        <ProjectModal isOpen={isProjectModalOpen} onClose={() => setIsProjectModalOpen(false)} projects={projects} />
-      )}
+      <ProjectModal isOpen={isProjectModalOpen} onClose={() => setIsProjectModalOpen(false)} projects={projects} />
     </main>
   )
 }
-

@@ -60,9 +60,9 @@ export default function Home() {
       id: 4,
       title: "Movie Diary (Backend)",
       description: "This is the source code for backend server of my movie-diary webapp which is powered by monogoDB.",
-      image: "/placeholder.svg?height=300&width=500&text=Task+App",
+      image: "/project/git.png?height=300&width=500&text=Task+App",
       tags: ["MongoDB", "Node.js ", "Backend Dev"],
-      githubUrl: "dummy link",
+      githubUrl: "https://github.com/Tr1pl3x/backend-my-movie-diary",
       liveUrl: "",
     },
     {

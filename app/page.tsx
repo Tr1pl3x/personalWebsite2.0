@@ -106,8 +106,7 @@ export default function Home() {
     "GraphQL",
   ]
 
-  const openProjectModal = (project) => {
-    setSelectedProject(project)
+  const openProjectModal = () => {
     setIsProjectModalOpen(true)
   }
 
@@ -297,7 +296,7 @@ export default function Home() {
                           Live Demo
                         </Link>
                         <button
-                          onClick={() => openProjectModal(project)}
+                          onClick={() => openProjectModal()}
                           className="text-white hover:text-orange-500 transition-colors flex items-center gap-1"
                         >
                           Details
@@ -571,13 +570,7 @@ export default function Home() {
 
       {/* Project Modal */}
       {isProjectModalOpen && (
-        <ProjectModal
-          isOpen={isProjectModalOpen}
-          onClose={() => setIsProjectModalOpen(false)}
-          projects={projects}
-          selectedProject={selectedProject}
-          setSelectedProject={setSelectedProject}
-        />
+        <ProjectModal isOpen={isProjectModalOpen} onClose={() => setIsProjectModalOpen(false)} projects={projects} />
       )}
     </main>
   )

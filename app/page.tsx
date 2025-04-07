@@ -211,8 +211,7 @@ export default function Home() {
             Penultimate CompENG Student
             </h2>
             <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl">
-              I build exceptional digital experiences that are fast, accessible, visually appealing, and responsive.
-              Let's turn your vision into reality.
+            Welcome to my portfolio! I'm Pyae Sone Oo, but my friends and peers also know me as <b>Morris</b>!
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button
@@ -226,7 +225,7 @@ export default function Home() {
                 href="#about"
                 className="border border-white/20 px-6 py-3 rounded-md hover:bg-white/10 transition-all duration-300 flex items-center justify-center gap-2 font-medium"
               >
-                About Me
+                More About Me
                 <User size={18} />
               </Link>
             </div>
@@ -252,48 +251,41 @@ export default function Home() {
             </div>
           </div>
           <div className="w-full md:w-2/3">
-            <p className="text-gray-300 mb-4">
-              I'm a passionate Full Stack Developer with expertise in building modern web applications. With a
-              strong foundation in both frontend and backend technologies, I create seamless user experiences that
-              are both functional and visually appealing.
+            <p className="text-gray-300 mb-4  text-center md:text-justify">
+            I'm from Yangon, Myanmar, and currently a penultimate-year Computer Engineering student at UNSW with a deep passion for technology and innovation. I excel at problem-solving through coding and data structures and am eager to apply my skills in real-world scenarios. I love taking on challenges that push my limits, as they drive my growth and creativity. Alongside my studies and internship search, I run a freelance photography service, offering graduations, portraits, and event photo services. Beyond technology, I find inspiration in diverse fields, always seeking new perspectives to enhance my work.
             </p>
-            <p className="text-gray-300 mb-6">
-              My journey in tech began 5 years ago, and since then, I've worked on various projects ranging from
-              e-commerce platforms to complex data visualization tools. I'm constantly learning and adapting to
-              new technologies to stay at the forefront of web development.
-            </p>
-            <div className="flex gap-4">
-            <Link
-                href="https://www.linkedin.com/in/pyae-sone-oo-779455134/"
-                target="_blank"
-                className="bg-[#0077b5] text-white px-4 py-2 rounded-md hover:bg-[#0069a0] transition-all duration-300 flex items-center gap-2"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="lucide lucide-linkedin"
-                >
-                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                  <rect width="4" height="12" x="2" y="9" />
-                  <circle cx="4" cy="4" r="2" />
-                </svg>
-                LinkedIn
-              </Link>
+            <div className="flex gap-4 justify-center sm:justify-start">
               <Link
-                href="https://github.com/Tr1pl3x"
-                target="_blank"
-                className="bg-white text-black px-4 py-2 rounded-md hover:bg-gray-200 transition-all duration-300 flex items-center gap-2"
-              >
-                <Github size={18} />
-                GitHub
-              </Link>
+                  href="https://www.linkedin.com/in/pyae-sone-oo-779455134/"
+                  target="_blank"
+                  className="bg-[#0077b5] text-white px-4 py-2 rounded-md hover:bg-[#0069a0] transition-all duration-300 flex items-center gap-2"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-linkedin"
+                  >
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                    <rect width="4" height="12" x="2" y="9" />
+                    <circle cx="4" cy="4" r="2" />
+                  </svg>
+                  LinkedIn
+                </Link>
+                <Link
+                  href="https://github.com/Tr1pl3x"
+                  target="_blank"
+                  className="bg-white text-black px-4 py-2 rounded-md hover:bg-gray-200 transition-all duration-300 flex items-center gap-2"
+                >
+                  <Github size={18} />
+                  GitHub
+                </Link>
               
             </div>
           </div>

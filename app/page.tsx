@@ -30,86 +30,51 @@ export default function Home() {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
+      title: "Projects and Assignments (UNSW)",
       description:
-        "A full-stack e-commerce platform with product management, cart functionality, and payment processing.",
-      image: "/project/git.png?height=300&width=500&text=git",
-      tags: ["React", "Node.js", "MongoDB"],
+        "Github reposiotory to the work I have done during my years of pursuing Bachelor of Computer Engineering at UNSW",
+      image: "/project/unsw.jpg?height=300&width=500&text=git",
+      tags: ["React.js", "GoogleAPI", "HTML/CSSS"],
       githubUrl: "https://github.com/yourusername/project1",
       liveUrl: "https://project1-demo.com",
     },
     {
       id: 2,
-      title: "Portfolio Website",
-      description: "A responsive portfolio website built with Next.js and Tailwind CSS.",
-      image: "/placeholder.svg?height=300&width=500&text=Portfolio",
+      title: "Trivia Website",
+      description: "A fun little trivia web app to test how well my friends know me while I secretly keep scores in the backend using google api to plot my revenge 😂",
+      image: "/project/trivia.jpg?height=300&width=500&text=Portfolio",
       tags: ["Next.js", "Tailwind CSS", "Framer Motion"],
-      githubUrl: "https://github.com/yourusername/project2",
+      githubUrl: "https://github.com/Tr1pl3x/trivia-ps",
       liveUrl: "",
     },
     {
       id: 3,
-      title: "Task Management App",
+      title: "Movie Diary (frontend)",
       description: "A task management application with drag-and-drop functionality and user authentication.",
-      image: "/placeholder.svg?height=300&width=500&text=Task+App",
-      tags: ["React", "Firebase", "Tailwind CSS"],
-      githubUrl: "https://github.com/yourusername/project3",
-      liveUrl: "https://project3-demo.com",
-    },
-    {
-      id: 9,
-      title: "Task Management App",
-      description: "A task management application with drag-and-drop functionality and user authentication.",
-      image: "/placeholder.svg?height=300&width=500&text=Task+App",
+      image: "/project/movie-diary.jpg?height=300&width=500&text=Task+App",
       tags: ["React", "Firebase", "Tailwind CSS"],
       githubUrl: "https://github.com/yourusername/project3",
       liveUrl: "https://project3-demo.com",
     },
     {
       id: 4,
-      title: "Task Management App",
-      description: "A task management application with drag-and-drop functionality and user authentication.",
-      image: "/placeholder.svg?height=300&width=500&text=Task+App",
+      title: "Portfolio Website",
+      description: "This is my portfolio website to showcase about myself, work and skills. Fun Fact: this is my second website to showcase myself :)",
+      image: "/project/personal.jpg?height=300&width=500&text=Task+App",
       tags: ["React", "Firebase", "Tailwind CSS"],
       githubUrl: "https://github.com/yourusername/project3",
       liveUrl: "https://project3-demo.com",
     },
     {
-      id: 5,
+      id: 999,
       title: "Task Management App",
       description: "A task management application with drag-and-drop functionality and user authentication.",
       image: "/placeholder.svg?height=300&width=500&text=Task+App",
       tags: ["React", "Firebase", "Tailwind CSS"],
-      githubUrl: "https://github.com/yourusername/project3",
-      liveUrl: "https://project3-demo.com",
+      githubUrl: "dummy link",
+      liveUrl: "dummy link",
     },
-    {
-      id: 6,
-      title: "Task Management App",
-      description: "A task management application with drag-and-drop functionality and user authentication.",
-      image: "/placeholder.svg?height=300&width=500&text=Task+App",
-      tags: ["React", "Firebase", "Tailwind CSS"],
-      githubUrl: "https://github.com/yourusername/project3",
-      liveUrl: "https://project3-demo.com",
-    },
-    {
-      id: 7,
-      title: "Task Management App",
-      description: "A task management application with drag-and-drop functionality and user authentication.",
-      image: "/placeholder.svg?height=300&width=500&text=Task+App",
-      tags: ["React", "Firebase", "Tailwind CSS"],
-      githubUrl: "https://github.com/yourusername/project3",
-      liveUrl: "https://project3-demo.com",
-    },
-    {
-      id: 8,
-      title: "Task Management App",
-      description: "A task management application with drag-and-drop functionality and user authentication.",
-      image: "/placeholder.svg?height=300&width=500&text=Task+App",
-      tags: ["React", "Firebase", "Tailwind CSS"],
-      githubUrl: "https://github.com/yourusername/project3",
-      liveUrl: "https://project3-demo.com",
-    },
+    
   ]
 
   // Timeline data - CUSTOMIZE THIS SECTION
@@ -211,7 +176,12 @@ export default function Home() {
               Hi, I'm <span className="text-orange-500">Pyae Sone</span>
               <span className="animate-blink ml-1">|</span>
             </h1>
-            <h2 className="text-2xl md:text-4xl font-semibold mb-6 text-yellow-400">Full Stack Developer</h2>
+            <h2 className="hidden sm:block text-2xl md:text-4xl font-semibold mb-6 text-yellow-400">
+              Penultimate Computer Engineering Student
+            </h2>
+            <h2 className="sm:hidden text-xl font-semibold mb-6 text-yellow-400">
+            Penultimate CompENG Student
+            </h2>
             <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl">
               I build exceptional digital experiences that are fast, accessible, visually appealing, and responsive.
               Let's turn your vision into reality.
@@ -250,7 +220,7 @@ export default function Home() {
         <div className="flex flex-col md:flex-row gap-8 items-center">
           <div className="w-full md:w-1/3 flex justify-center">
             <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-orange-500">
-              <Image src="/profile-pic/profilepic.jpg?height=200&width=200" alt="Profile" fill className="object-cover" />
+              <Image src="/profile-pic/profilepic.jpg?height=200&width=200" alt="Profile" fill className="object-cover" priority />
             </div>
           </div>
           <div className="w-full md:w-2/3">
@@ -266,7 +236,7 @@ export default function Home() {
             </p>
             <div className="flex gap-4">
             <Link
-                href="https://linkedin.com/in/yourusername"
+                href="https://www.linkedin.com/in/pyae-sone-oo-779455134/"
                 target="_blank"
                 className="bg-[#0077b5] text-white px-4 py-2 rounded-md hover:bg-[#0069a0] transition-all duration-300 flex items-center gap-2"
               >
@@ -289,7 +259,7 @@ export default function Home() {
                 LinkedIn
               </Link>
               <Link
-                href="https://github.com/yourusername"
+                href="https://github.com/Tr1pl3x"
                 target="_blank"
                 className="bg-white text-black px-4 py-2 rounded-md hover:bg-gray-200 transition-all duration-300 flex items-center gap-2"
               >
@@ -359,7 +329,7 @@ export default function Home() {
                             className="text-white hover:text-orange-500 transition-colors flex items-center gap-1"
                           >
                             <ExternalLink size={16} />
-                            Live Demo
+                            Live
                           </Link>
                         )}
                       </div>
@@ -463,7 +433,7 @@ export default function Home() {
               {/* Social Media Icons */}
               <div className="flex justify-center gap-6 mb-8">
                 <Link
-                  href="https://facebook.com/yourusername"
+                  href="https://www.facebook.com/pyaesone.oo.7/"
                   target="_blank"
                   className="text-white hover:text-orange-500 transition-colors"
                   aria-label="Facebook"
@@ -484,7 +454,7 @@ export default function Home() {
                   </svg>
                 </Link>
                 <Link
-                  href="https://linkedin.com/in/yourusername"
+                  href="https://www.linkedin.com/in/pyae-sone-oo-779455134/"
                   target="_blank"
                   className="text-white hover:text-orange-500 transition-colors"
                   aria-label="LinkedIn"
@@ -507,7 +477,7 @@ export default function Home() {
                   </svg>
                 </Link>
                 <Link
-                  href="https://instagram.com/yourusername"
+                  href="https://www.instagram.com/pyae_sone_oo.dng/"
                   target="_blank"
                   className="text-white hover:text-orange-500 transition-colors"
                   aria-label="Instagram"
@@ -530,7 +500,7 @@ export default function Home() {
                   </svg>
                 </Link>
                 <Link
-                  href="https://github.com/yourusername"
+                  href="https://github.com/Tr1pl3x"
                   target="_blank"
                   className="text-white hover:text-orange-500 transition-colors"
                   aria-label="GitHub"
@@ -538,7 +508,7 @@ export default function Home() {
                   <Github size={24} />
                 </Link>
                 <Link
-                  href="mailto:your.email@example.com"
+                  href="mailto:pyaesoneoo54321@gmail.com"
                   className="text-white hover:text-orange-500 transition-colors"
                   aria-label="Email"
                 >

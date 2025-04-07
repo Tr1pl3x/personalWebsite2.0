@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Portfolio | Pyae Sone Oo",
   description: "Personal portfolio showcasing my projects and skills",
-    generator: 'v0.dev'
+  generator: "v0.dev",
 }
 
 export default function RootLayout({
@@ -18,11 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <link rel="icon" href="/placeholder-logo.png" />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )
 }
-
-
-
-import './globals.css'

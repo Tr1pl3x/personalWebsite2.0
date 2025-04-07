@@ -1,27 +1,34 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Node modules (dependencies)
+node_modules/
 
-# dependencies
-/node_modules
+# Build output
+.next/
+out/
 
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# debug
+# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
+pnpm-debug.log*
 
-# env files
-.env*
+# System files
+.DS_Store
+Thumbs.db
 
-# vercel
-.vercel
+# Env variables
+.env
+.env.local
+.env.*.local
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# VS Code settings (optional)
+.vscode/
+
+# Lockfiles (optional, depending on your team setup)
+# Uncomment if you DON'T want to commit lockfile:
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Misc
+*.zip
+*.log

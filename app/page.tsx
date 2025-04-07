@@ -158,7 +158,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto relative z-10">
           <div className="animate-fade-in opacity-0" style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Hi, I'm <span className="text-orange-500">Pyae Sone Oo</span>
+              Hi, I'm <span className="text-orange-500">Pyae Sone</span>
               <span className="animate-blink ml-1">|</span>
             </h1>
             <h2 className="text-2xl md:text-4xl font-semibold mb-6 text-yellow-400">Full Stack Developer</h2>

@@ -30,7 +30,7 @@ export default function Home() {
   const projects = [
     {
       id: 1,
-      title: "Projects and Assignments (UNSW)",
+      title: "Projects and Assignments",
       description:
         "My Coursework from Computer Engineering courses at UNSW",
       image: "/project/unsw.jpg?height=300&width=500&text=git",
@@ -57,7 +57,7 @@ export default function Home() {
       liveUrl: "https://movies-diary-pyae.online/",
     },
     {
-      id: 6,
+      id: 4,
       title: "Movie Diary (Backend)",
       description: "This is the source code for backend server of my movie-diary webapp which is powered by monogoDB.",
       image: "/placeholder.svg?height=300&width=500&text=Task+App",
@@ -66,7 +66,7 @@ export default function Home() {
       liveUrl: "",
     },
     {
-      id: 4,
+      id: 5,
       title: "Portfolio Website",
       description: "This is my portfolio website to showcase about myself, work and skills. Fun Fact: this is my second website to showcase myself :)",
       image: "/project/personal.jpg?height=300&width=500&text=Task+App",
@@ -75,12 +75,21 @@ export default function Home() {
       liveUrl: "https://project3-demo.com",
     },
     {
-      id: 5,
+      id: 6,
       title: "Bot Alfred",
       description: "Discord bot named Alfred just like the butler of Batman, ready to service your needs!",
       image: "/project/git.png?height=300&width=500&text=Task+App",
       tags: ["Discord API", "JavaScirpt", "Python"],
       githubUrl: "https://github.com/Tr1pl3x/bot-Alfred",
+      liveUrl: "",
+    },
+    {
+      id: 7,
+      title: "Random Quote Generator ",
+      description: "This is a random quote generator with a twist! Every request you make will come with a cat emoji 😹",
+      image: "/project/git.png?height=300&width=500&text=Task+App",
+      tags: ["Javascript", "HTML/CSS", "API"],
+      githubUrl: "https://github.com/Tr1pl3x/Random-Quote-Generator-",
       liveUrl: "",
     },
     

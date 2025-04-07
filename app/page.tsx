@@ -33,7 +33,7 @@ export default function Home() {
       title: "E-Commerce Platform",
       description:
         "A full-stack e-commerce platform with product management, cart functionality, and payment processing.",
-      image: "/placeholder.svg?height=300&width=500&text=E-Commerce",
+      image: "/project/git.png?height=300&width=500&text=git",
       tags: ["React", "Node.js", "MongoDB"],
       githubUrl: "https://github.com/yourusername/project1",
       liveUrl: "https://project1-demo.com",
@@ -237,58 +237,73 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-zinc-900/50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div
-              className="animate-slide-up opacity-0"
-              style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-                About <span className="text-orange-500">Me</span>
-              </h2>
-              <div className="flex flex-col md:flex-row gap-8 items-center">
-                <div className="w-full md:w-1/3 flex justify-center">
-                  <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-orange-500">
-                    <Image src="/placeholder.svg?height=200&width=200" alt="Profile" fill className="object-cover" />
-                  </div>
-                </div>
-                <div className="w-full md:w-2/3">
-                  {/* CUSTOMIZE THIS SECTION - Your bio */}
-                  <p className="text-gray-300 mb-4">
-                    I'm a passionate Full Stack Developer with expertise in building modern web applications. With a
-                    strong foundation in both frontend and backend technologies, I create seamless user experiences that
-                    are both functional and visually appealing.
-                  </p>
-                  <p className="text-gray-300 mb-6">
-                    My journey in tech began 5 years ago, and since then, I've worked on various projects ranging from
-                    e-commerce platforms to complex data visualization tools. I'm constantly learning and adapting to
-                    new technologies to stay at the forefront of web development.
-                  </p>
-                  <div className="flex gap-4">
-                    <Link
-                      href="https://github.com/yourusername"
-                      target="_blank"
-                      className="bg-white text-black px-4 py-2 rounded-md hover:bg-gray-200 transition-all duration-300 flex items-center gap-2"
-                    >
-                      <Github size={18} />
-                      GitHub
-                    </Link>
-                    <Link
-                      href="/resume.pdf"
-                      target="_blank"
-                      className="bg-yellow-400 text-black px-4 py-2 rounded-md hover:bg-yellow-300 transition-all duration-300 flex items-center gap-2"
-                    >
-                      <ExternalLink size={18} />
-                      Resume
-                    </Link>
-                  </div>
-                </div>
-              </div>
+<section id="about" className="py-20 bg-zinc-900/50">
+  <div className="container mx-auto px-4">
+    <div className="max-w-4xl mx-auto">
+      <div
+        className="animate-slide-up opacity-0"
+        style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}
+      >
+        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+          About <span className="text-orange-500">Me</span>
+        </h2>
+        <div className="flex flex-col md:flex-row gap-8 items-center">
+          <div className="w-full md:w-1/3 flex justify-center">
+            <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-orange-500">
+              <Image src="/profile-pic/profilepic.jpg?height=200&width=200" alt="Profile" fill className="object-cover" />
+            </div>
+          </div>
+          <div className="w-full md:w-2/3">
+            <p className="text-gray-300 mb-4">
+              I'm a passionate Full Stack Developer with expertise in building modern web applications. With a
+              strong foundation in both frontend and backend technologies, I create seamless user experiences that
+              are both functional and visually appealing.
+            </p>
+            <p className="text-gray-300 mb-6">
+              My journey in tech began 5 years ago, and since then, I've worked on various projects ranging from
+              e-commerce platforms to complex data visualization tools. I'm constantly learning and adapting to
+              new technologies to stay at the forefront of web development.
+            </p>
+            <div className="flex gap-4">
+            <Link
+                href="https://linkedin.com/in/yourusername"
+                target="_blank"
+                className="bg-[#0077b5] text-white px-4 py-2 rounded-md hover:bg-[#0069a0] transition-all duration-300 flex items-center gap-2"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-linkedin"
+                >
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                  <rect width="4" height="12" x="2" y="9" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+                LinkedIn
+              </Link>
+              <Link
+                href="https://github.com/yourusername"
+                target="_blank"
+                className="bg-white text-black px-4 py-2 rounded-md hover:bg-gray-200 transition-all duration-300 flex items-center gap-2"
+              >
+                <Github size={18} />
+                GitHub
+              </Link>
+              
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Projects Section */}
       <section id="projects" className="py-20">

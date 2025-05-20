@@ -29,7 +29,7 @@ export default function Home() {
   // Project data - CUSTOMIZE THIS SECTION
   const projects = [
     {
-      id: 1,
+      id: 999,
       title: "Projects and Assignments",
       description:
         "My Coursework from Computer Engineering courses at UNSW",
@@ -39,7 +39,17 @@ export default function Home() {
       liveUrl: "",
     },
     {
-      id: 2,
+      id: 7,
+      title: "My Macros App",
+      description:
+        "I created a little full stack app to estimate my macros using claude ai api.",
+      image: "/project/mymacros.jpg?height=300&width=500&text=git",
+      tags: ["NodeJS", "REACT", "HTML/CSSS", "Web Development", "UI/UX", "API"],
+      githubUrl: "https://github.com/Tr1pl3x/my-macros",
+      liveUrl: "https://my-macros.vercel.app/",
+    },
+    {
+      id: 6,
       title: "Trivia Website",
       description: "A fun little trivia web app to test how well my friends know me while I secretly keep scores in the backend using google api to plot my revenge 😂",
       image: "/project/trivia.jpg?height=300&width=500&text=Portfolio",
@@ -48,7 +58,7 @@ export default function Home() {
       liveUrl: "https://trivia-ps.vercel.app/",
     },
     {
-      id: 3,
+      id: 5,
       title: "Movie Diary (frontend)",
       description: "A simple webapp diary to keep track off my latest cinema catches and note down my honest reviews! This is just the frontend of the webapp.",
       image: "/project/movie-diary.jpg?height=300&width=500&text=Task+App",
@@ -66,7 +76,7 @@ export default function Home() {
       liveUrl: "",
     },
     {
-      id: 5,
+      id: 3,
       title: "Portfolio Website",
       description: "This is my portfolio website to showcase about myself, work and skills. Fun Fact: this is my second website to showcase myself :)",
       image: "/project/personal.jpg?height=300&width=500&text=Task+App",
@@ -75,7 +85,7 @@ export default function Home() {
       liveUrl: "https://project3-demo.com",
     },
     {
-      id: 6,
+      id: 2,
       title: "Bot Alfred",
       description: "Discord bot named Alfred just like the butler of Batman, ready to service your needs!",
       image: "/project/git.png?height=300&width=500&text=Task+App",
@@ -84,7 +94,7 @@ export default function Home() {
       liveUrl: "",
     },
     {
-      id: 7,
+      id: 1,
       title: "Random Quote Generator ",
       description: "This is a random quote generator with a twist! Every request you make will come with a cat emoji 😹",
       image: "/project/git.png?height=300&width=500&text=Task+App",

@@ -32,3 +32,6 @@ Thumbs.db
 # Misc
 *.zip
 *.log
+
+# Claude Code
+CLAUDE.md

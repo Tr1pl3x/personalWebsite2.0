@@ -20,6 +20,16 @@ export const projects: Project[] = [
     liveUrl: "",
   },
   {
+    id: 8,
+    title: "My Expense Tracker",
+    description:
+      "A complete full-stack expense tracking application with a React frontend and FastAPI backend, featuring user authentication, expense management, and real-time analytics.",
+    image: "/project/expense-tracker.png?height=300&width=500&text=git",
+    tags: ["FastAPI", "REACT/VITE", "Web Development", "UI/UX", "API"],
+    githubUrl: "https://github.com/Tr1pl3x/MyExpenseTracker",
+    liveUrl: "https://my-expense-tracker-iojs.vercel.app/",
+  },
+  {
     id: 7,
     title: "My Macros App",
     description:

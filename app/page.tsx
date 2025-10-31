@@ -269,7 +269,7 @@ export default function Home() {
                     className={`relative mb-12 md:mb-16 ${index % 2 === 0 ? "md:ml-auto md:pl-12 pl-10" : "md:mr-auto md:pr-12 pl-10"} ${index % 2 === 0 ? "md:text-left" : "md:text-right"} md:w-1/2`}
                   >
                     {/* Timeline dot */}
-                    <div className="absolute left-[-8px] md:left-auto md:right-[-8px] top-0 w-4 h-4 rounded-full bg-yellow-500 border-4 border-black"></div>
+                    <div className={`absolute left-[-8px] top-0 w-4 h-4 rounded-full bg-yellow-500 border-4 border-black ${index % 2 === 0 ? "md:left-[-8px]" : "md:left-auto md:right-[-8px]"}`}></div>
 
                     {/* Content */}
                     <div className="bg-zinc-900 p-6 rounded-lg border border-white/10 hover:border-yellow-500/50 transition-all duration-300 hover:transform hover:scale-[1.02]">

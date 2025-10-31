@@ -61,12 +61,9 @@ const config: Config = {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        orange: {
-          500: "#f97316", // Primary orange
-          400: "#fb923c", // Lighter orange
-        },
         yellow: {
-          400: "#facc15", // Yellow accent
+          500: "#eab308", // Primary yellow
+          400: "#facc15", // Lighter yellow
         },
       },
       borderRadius: {

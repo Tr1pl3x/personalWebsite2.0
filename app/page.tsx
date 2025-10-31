@@ -5,6 +5,9 @@ import Link from "next/link"
 import Image from "next/image"
 import { useState, useEffect } from "react"
 import ProjectModal from "@/components/project-modal"
+import { projects } from "@/lib/data/projects"
+import { timelineItems } from "@/lib/data/timeline"
+import { skills } from "@/lib/data/skills"
 
 export default function Home() {
   const [showBackToTop, setShowBackToTop] = useState(false)
@@ -26,168 +29,31 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  // Project data - CUSTOMIZE THIS SECTION
-  const projects = [
-    {
-      id: 999,
-      title: "Projects and Assignments",
-      description:
-        "My Coursework from Computer Engineering courses at UNSW",
-      image: "/project/unsw.jpg?height=300&width=500&text=git",
-      tags: ["C/C++", "Java","Js/Ts", "HTML/CSSS", "VHDL/Verilog", "MIPS", "Machine Learning"],
-      githubUrl: "https://github.com/yourusername/project1",
-      liveUrl: "",
-    },
-    {
-      id: 7,
-      title: "My Macros App",
-      description:
-        "I created a little full stack app to estimate my macros using claude ai api.",
-      image: "/project/mymacros.jpg?height=300&width=500&text=git",
-      tags: ["NodeJS", "REACT", "HTML/CSSS", "Web Development", "UI/UX", "API"],
-      githubUrl: "https://github.com/Tr1pl3x/my-macros",
-      liveUrl: "https://my-macros.vercel.app/",
-    },
-    {
-      id: 6,
-      title: "Trivia Website",
-      description: "A fun little trivia web app to test how well my friends know me while I secretly keep scores in the backend using google api to plot my revenge 😂",
-      image: "/project/trivia.jpg?height=300&width=500&text=Portfolio",
-      tags: ["React.js", "GoogleAPI", "HTML/CSSS"],
-      githubUrl: "https://github.com/Tr1pl3x/trivia-ps",
-      liveUrl: "https://trivia-ps.vercel.app/",
-    },
-    {
-      id: 5,
-      title: "Movie Diary (frontend)",
-      description: "A simple webapp diary to keep track off my latest cinema catches and note down my honest reviews! This is just the frontend of the webapp.",
-      image: "/project/movie-diary.jpg?height=300&width=500&text=Task+App",
-      tags: ["React", "HTML/CSS", "API"],
-      githubUrl: "https://github.com/yourusername/project3",
-      liveUrl: "https://movies-diary-pyae.online/",
-    },
-    {
-      id: 4,
-      title: "Movie Diary (Backend)",
-      description: "This is the source code for backend server of my movie-diary webapp which is powered by monogoDB.",
-      image: "/project/git.png?height=300&width=500&text=Task+App",
-      tags: ["MongoDB", "Node.js ", "Backend Dev"],
-      githubUrl: "https://github.com/Tr1pl3x/backend-my-movie-diary",
-      liveUrl: "",
-    },
-    {
-      id: 3,
-      title: "Portfolio Website",
-      description: "This is my portfolio website to showcase about myself, work and skills. Fun Fact: this is my second website to showcase myself :)",
-      image: "/project/personal.jpg?height=300&width=500&text=Task+App",
-      tags: ["React", "Firebase", "Tailwind CSS"],
-      githubUrl: "https://github.com/yourusername/project3",
-      liveUrl: "https://project3-demo.com",
-    },
-    {
-      id: 2,
-      title: "Bot Alfred",
-      description: "Discord bot named Alfred just like the butler of Batman, ready to service your needs!",
-      image: "/project/git.png?height=300&width=500&text=Task+App",
-      tags: ["Discord API", "JavaScirpt", "Python"],
-      githubUrl: "https://github.com/Tr1pl3x/bot-Alfred",
-      liveUrl: "",
-    },
-    {
-      id: 1,
-      title: "Random Quote Generator ",
-      description: "This is a random quote generator with a twist! Every request you make will come with a cat emoji 😹",
-      image: "/project/git.png?height=300&width=500&text=Task+App",
-      tags: ["Javascript", "HTML/CSS", "API"],
-      githubUrl: "https://github.com/Tr1pl3x/Random-Quote-Generator-",
-      liveUrl: "",
-    },
-    
-    // {
-    //   id: 999,
-    //   title: "Task Management App",
-    //   description: "A task management application with drag-and-drop functionality and user authentication.",
-    //   image: "/placeholder.svg?height=300&width=500&text=Task+App",
-    //   tags: ["React", "Firebase", "Tailwind CSS"],
-    //   githubUrl: "dummy link",
-    //   liveUrl: "dummy link",
-    // },
-    
-  ]
-
-  // Timeline data - CUSTOMIZE THIS SECTION
-  const timelineItems = [
-    {
-      year: "2026",
-      title: "Bachelors in Computer Engieering",
-      company: "UNSW",
-      description: "Graduated with Bachlor's degree in Computer Engineering(Expected)",
-    },
-    {
-      year: "2022",
-      title: "Diploma in Engineering",
-      company: "UNSW ",
-      description: "Graduated with diploma in engieering",
-    },
-    {
-      year: "2020",
-      title: "UNSW Foundations",
-      company: "UNSW College",
-      description: "Finished pre-university program from UNSW",
-    },
-    {
-      year: "2018",
-      title: "IGCSE O Levels",
-      company: "Myanmar International School Yangon",
-      description: "Graduated highschool with 4A* among 6 subjects.",
-    },
-  ]
-
-  // Skills data - CUSTOMIZE THIS SECTION
-  const skills = [
-    "C/C++",
-    "JavaScript",
-    "TypeScript",
-    "React",
-    "Next.js",
-    "Node.js",
-    "Python",
-    "MongoDB",
-    "PostgreSQL",
-    "HTML5",
-    "CSS3",
-    "Tailwind CSS",
-    "Git",
-    "Docker",
-    "VHDL/Verilog",
-    "Java OOP",
-  ]
-
   return (
     <main className="min-h-screen bg-black text-white">
       {/* Header */}
       <header className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-sm border-b border-white/10">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <Link href="/" className="text-xl font-bold text-orange-500">
+          <Link href="/" className="text-xl font-bold text-yellow-500">
             Pyae Sone Oo
           </Link>
           <nav className="hidden md:flex gap-6">
-            <Link href="#about" className="hover:text-orange-500 transition-colors">
+            <Link href="#about" className="hover:text-yellow-500 transition-colors">
               About
             </Link>
-            <Link href="#projects" className="hover:text-orange-500 transition-colors">
+            <Link href="#projects" className="hover:text-yellow-500 transition-colors">
               Projects
             </Link>
-            <Link href="#timeline" className="hover:text-orange-500 transition-colors">
+            <Link href="#timeline" className="hover:text-yellow-500 transition-colors">
               Timeline
             </Link>
-            <Link href="#skills" className="hover:text-orange-500 transition-colors">
+            <Link href="#skills" className="hover:text-yellow-500 transition-colors">
               Skills
             </Link>
           </nav>
           <Link
             href="#contact"
-            className="bg-orange-500 text-black px-4 py-2 rounded-md hover:bg-orange-400 transition-all duration-300 flex items-center gap-2"
+            className="bg-yellow-500 text-black px-4 py-2 rounded-md hover:bg-yellow-400 transition-all duration-300 flex items-center gap-2"
           >
             <Mail size={16} />
             <span className="hidden sm:inline">Contact Me</span>
@@ -201,9 +67,9 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-black via-black to-black/70"></div>
           <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-            <div className="animate-float absolute top-[10%] left-[10%] w-32 h-32 rounded-full bg-orange-500/10 blur-xl"></div>
+            <div className="animate-float absolute top-[10%] left-[10%] w-32 h-32 rounded-full bg-yellow-500/10 blur-xl"></div>
             <div className="animate-float-delay-1 absolute top-[30%] right-[20%] w-40 h-40 rounded-full bg-yellow-400/10 blur-xl"></div>
-            <div className="animate-float-delay-2 absolute bottom-[20%] left-[30%] w-36 h-36 rounded-full bg-orange-500/10 blur-xl"></div>
+            <div className="animate-float-delay-2 absolute bottom-[20%] left-[30%] w-36 h-36 rounded-full bg-yellow-500/10 blur-xl"></div>
             <div className="animate-float-delay-3 absolute bottom-[10%] right-[10%] w-24 h-24 rounded-full bg-white/10 blur-xl"></div>
           </div>
         </div>
@@ -211,7 +77,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto relative z-10">
           <div className="animate-fade-in opacity-0" style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Hi, I'm <span className="text-orange-500">Pyae Sone</span>
+              Hi, I'm <span className="text-yellow-500">Pyae Sone</span>
               <span className="animate-blink ml-1">|</span>
             </h1>
             <h2 className="hidden sm:block text-2xl md:text-4xl font-semibold mb-6 text-yellow-400">
@@ -226,7 +92,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 onClick={() => setIsProjectModalOpen(true)}
-                className="bg-orange-500 text-black px-6 py-3 rounded-md hover:bg-orange-400 transition-all duration-300 flex items-center justify-center gap-2 font-medium"
+                className="bg-yellow-500 text-black px-6 py-3 rounded-md hover:bg-yellow-400 transition-all duration-300 flex items-center justify-center gap-2 font-medium"
               >
                 View My Work
                 <ArrowRight size={18} />
@@ -252,11 +118,11 @@ export default function Home() {
         style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}
       >
         <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-          About <span className="text-orange-500">Me</span>
+          About <span className="text-yellow-500">Me</span>
         </h2>
         <div className="flex flex-col md:flex-row gap-8 items-center">
           <div className="w-full md:w-1/3 flex justify-center">
-            <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-orange-500">
+            <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-yellow-500">
               <Image src="/profile-pic/profilepic.jpg?height=200&width=200" alt="Profile" fill className="object-cover" priority />
             </div>
           </div>
@@ -314,13 +180,13 @@ export default function Home() {
               style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-                My <span className="text-orange-500">Projects</span>
+                My <span className="text-yellow-500">Projects</span>
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {projects.slice(0, 3).map((project) => (
                   <div
                     key={project.id}
-                    className="bg-zinc-900 rounded-lg overflow-hidden border border-white/10 hover:border-orange-500/50 transition-all duration-300 hover:transform hover:scale-[1.02] group"
+                    className="bg-zinc-900 rounded-lg overflow-hidden border border-white/10 hover:border-yellow-500/50 transition-all duration-300 hover:transform hover:scale-[1.02] group"
                   >
                     <div className="relative h-48 w-full">
                       <Image
@@ -337,7 +203,7 @@ export default function Home() {
                         {project.tags.map((tag, index) => (
                           <span
                             key={index}
-                            className="bg-black px-2 py-1 rounded text-xs text-orange-500 border border-orange-500/30"
+                            className="bg-black px-2 py-1 rounded text-xs text-yellow-500 border border-yellow-500/30"
                           >
                             {tag}
                           </span>
@@ -347,7 +213,7 @@ export default function Home() {
                         <Link
                           href={project.githubUrl}
                           target="_blank"
-                          className="text-white hover:text-orange-500 transition-colors flex items-center gap-1"
+                          className="text-white hover:text-yellow-500 transition-colors flex items-center gap-1"
                         >
                           <Github size={16} />
                           Code
@@ -356,7 +222,7 @@ export default function Home() {
                           <Link
                             href={project.liveUrl}
                             target="_blank"
-                            className="text-white hover:text-orange-500 transition-colors flex items-center gap-1"
+                            className="text-white hover:text-yellow-500 transition-colors flex items-center gap-1"
                           >
                             <ExternalLink size={16} />
                             Live
@@ -370,7 +236,7 @@ export default function Home() {
               <div className="mt-12 text-center">
                 <button
                   onClick={() => setIsProjectModalOpen(true)}
-                  className="border border-orange-500 text-orange-500 px-6 py-3 rounded-md hover:bg-orange-500 hover:text-black transition-all duration-300 inline-flex items-center gap-2"
+                  className="border border-yellow-500 text-yellow-500 px-6 py-3 rounded-md hover:bg-yellow-500 hover:text-black transition-all duration-300 inline-flex items-center gap-2"
                 >
                   View All Projects
                   <ArrowRight size={18} />
@@ -390,11 +256,11 @@ export default function Home() {
               style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-                My <span className="text-orange-500">Journey</span>
+                My <span className="text-yellow-500">Journey</span>
               </h2>
               <div className="relative">
                 {/* Timeline line */}
-                <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-orange-500/30"></div>
+                <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-yellow-500/30"></div>
 
                 {/* Timeline items */}
                 {timelineItems.map((item, index) => (
@@ -403,11 +269,11 @@ export default function Home() {
                     className={`relative mb-12 md:mb-16 ${index % 2 === 0 ? "md:ml-auto md:pl-12 pl-10" : "md:mr-auto md:pr-12 pl-10"} ${index % 2 === 0 ? "md:text-left" : "md:text-right"} md:w-1/2`}
                   >
                     {/* Timeline dot */}
-                    <div className="absolute left-[-8px] md:left-auto md:right-[-8px] top-0 w-4 h-4 rounded-full bg-orange-500 border-4 border-black"></div>
+                    <div className={`absolute left-[-8px] top-0 w-4 h-4 rounded-full bg-yellow-500 border-4 border-black ${index % 2 === 0 ? "md:left-[-8px]" : "md:left-auto md:right-[-8px]"}`}></div>
 
                     {/* Content */}
-                    <div className="bg-zinc-900 p-6 rounded-lg border border-white/10 hover:border-orange-500/50 transition-all duration-300 hover:transform hover:scale-[1.02]">
-                      <span className="inline-block px-3 py-1 bg-black text-orange-500 rounded-full text-sm font-semibold mb-3">
+                    <div className="bg-zinc-900 p-6 rounded-lg border border-white/10 hover:border-yellow-500/50 transition-all duration-300 hover:transform hover:scale-[1.02]">
+                      <span className="inline-block px-3 py-1 bg-black text-yellow-500 rounded-full text-sm font-semibold mb-3">
                         {item.year}
                       </span>
                       <h3 className="text-xl font-bold text-yellow-400 mb-1">{item.title}</h3>
@@ -431,15 +297,15 @@ export default function Home() {
               style={{ animationDelay: "0.5s", animationFillMode: "forwards" }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-                My <span className="text-orange-500">Skills</span>
+                My <span className="text-yellow-500">Skills</span>
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {skills.map((skill, index) => (
                   <div
                     key={index}
-                    className="bg-zinc-900 p-4 rounded-lg border border-white/10 hover:border-orange-500/50 transition-all duration-300 hover:transform hover:scale-[1.05] text-center group"
+                    className="bg-zinc-900 p-4 rounded-lg border border-white/10 hover:border-yellow-500/50 transition-all duration-300 hover:transform hover:scale-[1.05] text-center group"
                   >
-                    <span className="text-lg font-medium group-hover:text-orange-500 transition-colors">{skill}</span>
+                    <span className="text-lg font-medium group-hover:text-yellow-500 transition-colors">{skill}</span>
                   </div>
                 ))}
               </div>
@@ -457,7 +323,7 @@ export default function Home() {
               style={{ animationDelay: "0.6s", animationFillMode: "forwards" }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-                Get In <span className="text-orange-500">Touch</span> Now!
+                Get In <span className="text-yellow-500">Touch</span> Now!
               </h2>
 
               {/* Social Media Icons */}
@@ -465,7 +331,7 @@ export default function Home() {
                 <Link
                   href="https://www.facebook.com/pyaesone.oo.7/"
                   target="_blank"
-                  className="text-white hover:text-orange-500 transition-colors"
+                  className="text-white hover:text-yellow-500 transition-colors"
                   aria-label="Facebook"
                 >
                   <svg
@@ -486,7 +352,7 @@ export default function Home() {
                 <Link
                   href="https://www.linkedin.com/in/pyae-sone-oo-779455134/"
                   target="_blank"
-                  className="text-white hover:text-orange-500 transition-colors"
+                  className="text-white hover:text-yellow-500 transition-colors"
                   aria-label="LinkedIn"
                 >
                   <svg
@@ -509,7 +375,7 @@ export default function Home() {
                 <Link
                   href="https://www.instagram.com/pyae_sone_oo.dng/"
                   target="_blank"
-                  className="text-white hover:text-orange-500 transition-colors"
+                  className="text-white hover:text-yellow-500 transition-colors"
                   aria-label="Instagram"
                 >
                   <svg
@@ -532,14 +398,14 @@ export default function Home() {
                 <Link
                   href="https://github.com/Tr1pl3x"
                   target="_blank"
-                  className="text-white hover:text-orange-500 transition-colors"
+                  className="text-white hover:text-yellow-500 transition-colors"
                   aria-label="GitHub"
                 >
                   <Github size={24} />
                 </Link>
                 <Link
                   href="mailto:pyaesoneoo54321@gmail.com"
-                  className="text-white hover:text-orange-500 transition-colors"
+                  className="text-white hover:text-yellow-500 transition-colors"
                   aria-label="Email"
                 >
                   <Mail size={24} />
@@ -555,7 +421,7 @@ export default function Home() {
       {/* Back to Top Button */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className={`fixed bottom-6 right-6 bg-orange-500 text-black p-3 rounded-full shadow-lg hover:bg-orange-400 transition-all duration-300 z-50 ${showBackToTop ? "opacity-100 visible" : "opacity-0 invisible"}`}
+        className={`fixed bottom-6 right-6 bg-yellow-500 text-black p-3 rounded-full shadow-lg hover:bg-yellow-400 transition-all duration-300 z-50 ${showBackToTop ? "opacity-100 visible" : "opacity-0 invisible"}`}
         aria-label="Back to top"
       >
         <ArrowUp size={20} />

@@ -55,20 +55,20 @@ export default function ProjectModal({ isOpen, onClose, projects }) {
         {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-10 bg-black/50 p-2 rounded-full text-white hover:bg-orange-500 hover:text-black transition-colors"
+          className="absolute top-4 right-4 z-10 bg-black/50 p-2 rounded-full text-white hover:bg-yellow-500 hover:text-black transition-colors"
           aria-label="Close modal"
         >
           <X size={20} />
         </button>
 
-        <h2 className="text-3xl font-bold mb-6 text-orange-500">My Projects</h2>
+        <h2 className="text-3xl font-bold mb-6 text-yellow-500">My Projects</h2>
 
         {/* Projects grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
             <div
               key={project.id}
-              className="bg-black/30 rounded-lg overflow-hidden border border-white/10 hover:border-orange-500/50 transition-all duration-300"
+              className="bg-black/30 rounded-lg overflow-hidden border border-white/10 hover:border-yellow-500/50 transition-all duration-300"
             >
               <div className="relative h-48 w-full">
                 <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
@@ -80,7 +80,7 @@ export default function ProjectModal({ isOpen, onClose, projects }) {
                   {project.tags.map((tag, index) => (
                     <span
                       key={index}
-                      className="bg-black px-2 py-1 rounded text-xs text-orange-500 border border-orange-500/30"
+                      className="bg-black px-2 py-1 rounded text-xs text-yellow-500 border border-yellow-500/30"
                     >
                       {tag}
                     </span>
@@ -93,7 +93,7 @@ export default function ProjectModal({ isOpen, onClose, projects }) {
                   <Link
                     href={project.githubUrl}
                     target="_blank"
-                    className="text-white hover:text-orange-500 transition-colors flex items-center gap-1 text-sm"
+                    className="text-white hover:text-yellow-500 transition-colors flex items-center gap-1 text-sm"
                   >
                     <Github size={16} />
                     Code
@@ -102,7 +102,7 @@ export default function ProjectModal({ isOpen, onClose, projects }) {
                     <Link
                       href={project.liveUrl}
                       target="_blank"
-                      className="text-white hover:text-orange-500 transition-colors flex items-center gap-1 text-sm"
+                      className="text-white hover:text-yellow-500 transition-colors flex items-center gap-1 text-sm"
                     >
                       <ExternalLink size={16} />
                       Live Demo
